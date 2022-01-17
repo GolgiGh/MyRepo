@@ -1,0 +1,19 @@
+.navbar
+{
+   background-color: black;
+  height: 100px;
+} 
+a
+{
+padding: 100px;
+text-align: right;
+color: ghostwhite;
+}
+
+.img-fluid{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 1px;
+}
