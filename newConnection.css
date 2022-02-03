@@ -1,7 +1,6 @@
 .navbar
 {
    background-color: black;
-  height: 150px;
   white-space: nowrap;
 } 
 .navbar-left
@@ -17,10 +16,12 @@
    background-color: black;
    text-align: right;
   white-space: nowrap;
-  flex:7;
-  border: aqua;
+  
 } 
-
+.navbar-kofi
+{
+    color: black;
+}
 .navbar a
 {
 padding: 14px;
@@ -64,4 +65,12 @@ padding:20px;
 color: ghostwhite;
 padding-bottom: 10px;
 display: inline-block;
+}
+
+.mango{
+    align-content: center;
+}
+
+form{
+    text-align: center;
 }
