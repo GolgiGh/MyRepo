@@ -1,6 +1,7 @@
 .navbar
 {
   background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
+  display: block;
   white-space: nowrap;
 } 
 .navbar-left
@@ -16,12 +17,10 @@
   background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
    text-align: right;
   white-space: nowrap;
-  
+  flex:7;
+  border: aqua;
 } 
-.navbar-kofi
-{
-    color: black;
-}
+
 .navbar a
 {
 padding: 14px;
@@ -71,31 +70,57 @@ text-decoration: none;
 
 .mango{
     align-content: center;
+   
 }
+.mango input{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  right:30px ;
+  top:50px 
+}
+.content{
+  display: flex;
 
-form{
-    text-align: center;
-    padding: 0.7;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    padding-top: 60px;
+}
+.content-left{
+  flex: 0.5;
+  text-align: center;
+  display: inline-block;
+  padding-top: 60px;
   padding-right: 40px;
   padding-bottom: 60px;
   padding-left: 90px;
 }
 
-.drink input
+  .content-left dt 
+  {
+    position: relative;
+    right: 55px;
+  }
+
+.content-right
 {
-  background-color: black;
-  color: white;
-  text-align: right;
-  position: relative;
-  left:  220px;
-  font-size: 15px;
-  
+  flex:0.5;
+  text-align: center;
+  display: inline-block;
 }
-  
+.orange{
+  padding-top: 80px;
+  padding-right: 50px;
+  padding-bottom: 80px;
+  padding-left: 270px;
+  position: relative;
+  right: 95px;
+  top: -190px;
+}
+.fosu img{
+  position: relative;
+  left: 250px;
+  top: -200px;
+}
+
 .k{
   width: 50px;
     height: 50px;
@@ -105,11 +130,18 @@ form{
     position: relative;
     left: 850px;
 }
-body{
+
+body
+{
   background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
 }
 
-label
+dt
+{
+  color:white;
+  font-size: 30px;
+}
+dd
 {
   color:white;
   font-size: 20px;
