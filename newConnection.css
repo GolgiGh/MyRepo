@@ -85,13 +85,14 @@ form{
   padding-left: 90px;
 }
 
-.drink input
+.drink form input
 {
   background-color: black;
   color: white;
   text-align: right;
   position: relative;
-  left:  220px;
+  right:  -220px;
+  top: -130px;
   font-size: 15px;
   
 }

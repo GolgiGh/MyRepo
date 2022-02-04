@@ -72,13 +72,23 @@ text-decoration: none;
     align-content: center;
    
 }
-.mango input{
+.mango form input{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  right:150px ;
+  top:60px 
+}
+
+.grapes form input
+{
   background-color: black;
   color: white;
   font-size: 20px;
   position: relative;
   right:30px ;
-  top:50px 
+  top:25px 
 }
 .content{
   display: flex;
@@ -117,8 +127,8 @@ text-decoration: none;
 }
 .fosu img{
   position: relative;
-  left: 250px;
-  top: -200px;
+  left: 230px;
+  top: -160px;
 }
 
 .k{
