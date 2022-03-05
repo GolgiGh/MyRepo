@@ -1,0 +1,51 @@
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet"  href="/css/connection.css" >
+<style type="text/css">
+    body,.navbar, .navbar-left, .navbar-right, .obed  {
+       background-image: url('/images/interiorImage.MQ6.12.20210713105346.jpeg');
+       margin: 0;
+   }
+</style>
+        </div>
+        <div class="content">
+            <div class = "content-left">
+                <dl>
+            <dt><%=connection.title%></dt> 
+            <dd>Hosted by<%= connection.host%></dd> 
+            <dd><%= connection.when %></dd>  <br>
+            <dd><%= connection.start%> - <%connection.end%></dd> 
+            <dd><%= connection.where%></dd> 
+            </dl>
+                        </div>
+    
+            <div class = "content-right">
+                <div class = "mango"> 
+                    <form action="/connections">
+                        <button type="submit"  formmethod="GET" formaction="/connections/<%=connection.id%>/edit"> Update</button>
+                    </form>
+                    </div>
+            <div class= "grapes">
+                    <form action="/connections">
+                        <button type="submit"  formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE"> Delete</button>
+                    </form>
+                    </div>
+                    
+                </div>
+            </div>
+        <div class="fosu">
+            <img src="<%=connection.image_url%>" alt="#" width="80" >
+        </div>
+        
+           
+            
+
+            
+        
+        <div class="orange">
+         <dl>
+         <dt>Details</dt>
+         <dd><%=connection.details%></dd>
+         </dl>
+</div>
+       
+<%- include('../partials/footer.ejs')%>  

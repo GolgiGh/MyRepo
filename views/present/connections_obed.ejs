@@ -1,0 +1,25 @@
+
+<%- include('../partials/header.ejs')%>
+<link rel="stylesheet"  href="/css/connections.css" >
+        <style type="text/css">
+            body,.navbar, .navbar-left, .navbar-right, .obed  {
+               background-image: url('/images/interiorImage.MQ6.12.20210713105346.jpeg');
+               margin: 0;
+           }
+       </style>
+       <div class= "alice">
+           <div class="moda">
+        <% if(connections.length){%>
+           <dt> pick a Spring 2021 classes</dt>
+          <%connections.forEach(connection =>{%>
+            <a href="/connections/<%=connection.id%>"> <p><%=connection.title%></p></a> 
+            
+        <% });
+        
+            }else {%> 
+                <P> There is no connection to display</P>
+                <%} %>
+            </div>
+        </div>
+
+        <%- include('../partials/footer.ejs')%>

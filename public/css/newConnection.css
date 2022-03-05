@@ -1,0 +1,148 @@
+.navbar
+{
+  background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
+  white-space: nowrap;
+} 
+.navbar-left
+{
+  background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
+   text-align: left;
+  white-space: nowrap;
+  
+} 
+
+.navbar-right
+{
+  background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
+   text-align: right;
+  white-space: nowrap;
+  
+} 
+.navbar-kofi
+{
+    color: black;
+}
+.navbar a
+{
+padding: 14px;
+text-align: right;
+color: ghostwhite;
+display:inline-block;
+margin-top: 0px;
+position:relative;
+font-size: 25px;
+text-decoration: none;
+
+}
+
+.img-fluid{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 1px;
+}
+p
+{
+ text-align: center;
+ align-items: center;
+ justify-content: center;
+ padding: 70px;
+ 
+}
+.obed {
+  background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 99%;
+  height: 80px;
+  padding-right: 0%;
+  padding-bottom: 0%;;
+}
+.obed a
+{
+padding:20px;
+color: ghostwhite;
+padding-bottom: 10px;
+display: inline-block;
+text-decoration: none;
+}
+
+.mango{
+    align-content: center;
+}
+
+form{
+    text-align: center;
+    padding: 0.7;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 60px;
+  padding-right: 40px;
+  padding-bottom: 60px;
+  padding-left: 90px;
+}
+
+.drink form input
+{
+  background-color: black;
+  color: white;
+  text-align: right;
+  position: relative;
+  right:  -170.5px;
+  top: -130px;
+  font-size: 15px;
+  
+}
+  
+.k{
+  width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1px;
+    position: relative;
+    left: 850px;
+}
+body{
+  background-image: url("interiorImage.MQ6.12.20210713105346.jpeg");
+}
+
+label
+{
+  color:white;
+  font-size: 20px;
+}
+.pool input{
+  width: 100%;
+  padding: 12px 2opx;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 3px solid white;
+}
+
+.pool textarea
+{
+  border-radius: 3px;
+  border: 3px solid white;
+}
+
+.pool form
+{
+  position: relative;
+  top:-15px;
+  left:310px
+}
+
+._bet {background-color: black;
+  color: white;
+  text-align: right;
+  position: relative;
+  right:  -170.5px;
+  top: -130px;
+  font-size: 15px;
+}
+  
