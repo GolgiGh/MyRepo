@@ -1,0 +1,31 @@
+.table,th,  td{
+    border: 2px solid white;
+    margin-left: 590px;
+  margin-top: -270px;
+    color: white;
+   
+   
+    
+}
+td{
+    font-size: larger;
+}
+th{
+    color: white;
+}
+
+.Madina,th, td{
+    border: 2px solid white;
+    margin-left: 590px;
+    margin-top: -320px;
+}
+
+a
+{
+   color: white; 
+
+}
+h5
+{
+    font-size: 25px;
+}

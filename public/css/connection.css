@@ -95,7 +95,7 @@ text-decoration: none;
 
 }
 .content-left{
-  flex: 0.5;
+  flex: 0.8;
   text-align: center;
   display: inline-block;
   padding-top: 60px;
@@ -126,9 +126,12 @@ text-decoration: none;
   top: -190px;
 }
 .fosu img{
-  position: relative;
-  left: 230px;
-  top: -160px;
+  position: absolute;
+  left: 50px;
+  border-radius: 4px;
+  border: 1px solid white;
+
+  
 }
 
 .k{
@@ -154,6 +157,15 @@ dt
 dd
 {
   color:white;
-  font-size: 20px;
+  font-size: 21px;
 }
 
+.Barca
+{
+  position: relative;
+  left: 920px;
+  top: -178px;
+}
+.Barca, h3{
+  color:white;
+}

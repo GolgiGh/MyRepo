@@ -11,41 +11,60 @@
             <div class = "content-left">
                 <dl>
             <dt><%=connection.title%></dt> 
-            <dd>Hosted by<%= connection.host%></dd> 
+            <dd>Hosted <%= connection.createdAt.toLocaleString()%> by <%= connection.host.firstName + ' ' + connection.host.lastName%></dd> 
+            <div id = "connection"></div>
+            <%if(user != connection.host.id){%>
+            <%}%>
+            <div class="fosu">
+                <img src="<%=connection.image_url%>" alt="#" height="200"width="280" >
+ </div>
+
             <dd><%= connection.when %></dd>  <br>
-            <dd><%= connection.start%> - <%connection.end%></dd> 
+            <dd><%= connection.start%> - <%=connection.end%></dd> 
             <dd><%= connection.where%></dd> 
+            <dd><%=rsvpcount%> People are going</dd>
+            <dt>Details</dt>
+            <dd><%=connection.details%></dd>
+    
             </dl>
                         </div>
-    
+             
+            
+            
+              <%  if(user && connection.host._id == user._id){%>
+
+               
             <div class = "content-right">
-                <div class = "mango"> 
+                
                     <form action="/connections">
                         <button type="submit"  formmethod="GET" formaction="/connections/<%=connection.id%>/edit"> Update</button>
                     </form>
-                    </div>
-            <div class= "grapes">
+                   
+            
                     <form action="/connections">
                         <button type="submit"  formmethod="POST" formaction="/connections/<%=connection.id%>?_method=DELETE"> Delete</button>
                     </form>
                     </div>
+                    <%} else{%>
+
+                        </div>
+                        <div class="Barca" >
+                        <h3> please RSVP</h3>
+                        <form action="/connection">
+                            <button type="submit" formmethod="POST" name="rsvpresponse" value="Yes" formaction="/connections/<%=connection.id%>/rsvp">Yes</button> 
+                            <button type="submit" formmethod="POST" name="rsvpresponse" value="No" formaction="/connections/<%=connection.id%>/rsvp">No</button> 
+                            <button type="submit" formmethod="POST" name="rsvpresponse"  value="Maybe" formaction="/connections/<%=connection.id%>/rsvp">Maybe</button> 
+                        </form>
                     
                 </div>
-            </div>
-        <div class="fosu">
-            <img src="<%=connection.image_url%>" alt="#" width="80" >
-        </div>
-        
-           
-            
+            <%}%>
 
-            
-        
-        <div class="orange">
-         <dl>
-         <dt>Details</dt>
-         <dd><%=connection.details%></dd>
-         </dl>
-</div>
+           
        
+            </div>
+            
+            
+    
+       
+    
 <%- include('../partials/footer.ejs')%>  

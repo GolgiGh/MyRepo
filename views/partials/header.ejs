@@ -4,7 +4,14 @@
         <meta charset="UTF-8">
         <title> Project 1</title>
         <link rel="stylesheet"  href="/css/index.css" >
+        <style type="text/css">
+            body, .navbar, .navbar-left, .navbar-right, .obed {
+               background-image: url('/images/interiorImage.MQ6.12.20210713105346.jpeg');
+               margin: 0;
+           }
+        </style>
     </head>
+    
     <body>
         <nav class="navbar">
             <div>
@@ -13,10 +20,21 @@
                     
                 </div>
                 <div class = "navbar-right">
+                   
                     
-                    <a href='connections/newConnection'>Start a new link  <span>|</span></a> 
-                    <a href="">login <span>|</span></a> 
-                    <a href="">Sign Up</a>
+                     
+                    <%if(!user) {%>
+                        
+                    <a href='/users/login'>login <span>|</span></a> 
+                    <a href='/users/newConnection'>Sign Up</a>
+                    <%} else {%>
+                     <a href='/connections/newConnection'>Start a new link  <span>|</span></a> 
+
+                    <a href='/users/profile'>Profile</a>
+                    <a href='/users/logout'>Logout</a>
+                    <%}%>
+
+                    
                 </div>
             </div>
             <div style="height: 1px; background-color: #fff;"></div>
@@ -26,3 +44,23 @@
             </div>
             </div>
         </nav>
+        <%if(user){%>
+            <h6><%=user.name%></h6>
+
+        <%}%>
+        <% if(errorMessages.length > 0) {%>
+            <% errorMessages.forEach(message=>{%>
+                <div class='error'>
+                    <%=message%>
+                </div>
+                <%});%>
+                    <%}%>
+        
+                        <% if(successMessages.length > 0) {%>
+        
+                            <% successMessages.forEach(message=>{%>
+                                <div class='success'>
+                                    <%=message%>
+                                </div>
+                                <%});%>
+                                    <%}%>

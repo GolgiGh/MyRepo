@@ -1,0 +1,104 @@
+<%- include('../partials/header.ejs')%>
+    <link rel="stylesheet" href="/css/profile.css">
+
+    <style type="text/css">
+        body,
+        .navbar,
+        .navbar-left,
+        .navbar-right,
+        .obed {
+            background-image: url('/images/interiorImage.MQ6.12.20210713105346.jpeg');
+            margin: 0;
+        }
+    </style>
+
+    <div class="content">
+        <h2>Welcome, <%=user.firstName%>
+        </h2>
+        <%if(connections.length===0) {%>
+            <p>You have not created any connections</p>
+            <%} else {%>
+                <p>You have created the following connections</p>
+                <table class="table">
+                    <thead>
+
+                        <th> CONNECTION</th>
+                        <th> CATEGORY</th>
+                        <th>ACTIONS</th>
+                
+                       
+
+                    </thead>
+                    <tbody>
+                        <%connections.forEach(connection=> {%>
+
+                            <tr>
+                                <td>
+                                    <a href="/connections/<%= connection.id%>" > <%=connection.title%></a>
+                                </td>
+                                <td>
+                                    <%= connection.topic%>
+                                </td>
+                                <td>
+                                    <form >
+                                        <button type="submit" formmethod="GET"
+                                            formaction="/connections/<%=connection.id%>/edit"> Update</button>
+                                    </form>
+                                    <form >
+                                        <button type="submit" formmethod="POST"
+                                            formaction="/connections/<%=connection.id%>?_method=DELETE"> Delete</button>
+                                    </form>
+
+                                </td>
+
+                            </tr>
+
+
+
+
+
+                            <%});%>
+
+                                <%}%>
+                    </tbody>
+                </table>
+    </div>
+
+    <br><br><br><br>
+    <h5>
+        <%=user.firstName%> RSVP
+    </h5>
+    <%if(RSVPs.length>0){%>
+        <p>YOu have the following RSVP</p>
+        <table class="Madina">
+            <thead>
+
+                <th> CONNECTION</th>
+                <th> CATEGORY</th>
+                <th>GOING?</th>
+
+            </thead>
+            <tbody>
+                <%RSVPs.forEach(rsvp=> {%>
+                    <tr>
+                        <td>
+                             <a href="/connections/<%=rsvp.connection.id%>"> <%=rsvp.connection.title%> </a>
+                           
+
+                        </td>
+                        <td>
+                            <%=rsvp.connection.topic%>
+                        </td>
+                        <td>
+                            <%=rsvp.Response%>
+                        </td>
+
+
+                    </tr>
+            </tbody>
+            <%} ); %>
+        </table>
+        <%} else {%>
+            <p>You have no rsvps</p>
+            <%}%>
+                <%- include('../partials/footer.ejs')%>

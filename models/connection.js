@@ -1,72 +1,20 @@
 const {DateTime} = require("luxon");
-const { uuid} = require('uuidv4');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-const connections = [
-    {
-        id: '1',
-        topic: 'ITIS 3246',
-        title: 'Working with linux',
-        host: 'GOLGIM',
-        details: 'I am new to linux and Would like to connect  with others to explore the IDE and learn the ins and outs',
-        where: 'Fretwell room 107',
-        when: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT),
-        start: '11:30 pm',
-        end: '1:00pm',
-        image_url: 'https://1000logos.net/wp-content/uploads/2017/03/Symbol-Linux.jpg'
-        
-    },
+const connectionSchema = new Schema({
+    topic:{type: String, required: [true, 'topic is required']},
+    title:{type: String, required: [true, 'title is required']},
+    host:{type: Schema.Types.ObjectId, ref: 'User'},
+    details:{type: String, required: [true, 'details is required'], minlength:[10, 'the details should have at least 10 characters']},
+    where:{type: String, required: [true, 'where  is required']},
+    when:{type: String, required: [true, 'when is required']},
+    start:{type: String, required: [true, 'start is required']},
+    end:{type: String, required: [true, 'end is required']},
+    image_url:{type: String, required: [true, 'image_url is required']}
 
-    {
-        id: '2',
-        topic: 'ITIS 3135',
-        title: 'Creating website',
-        host: 'GOLGIM',
-        details: 'I want to learn how to use visual studio code to develop a website',
-        where: 'Woodward room 105',
-        when: DateTime.now().toLocaleString(DateTime.DATETIME_SHORT),
-        start: '11:00 am',
-        end: '1:00pm',
-        image_url: 'https://i.ytimg.com/vi/fJEbVCrEMSE/maxresdefault.jpg'
-    }
+},
+{timestamps: true});
 
-    
-];
-
-exports.find = () => connections;
-
-exports.findById = id => connections.find(connection => connection.id === id);
-
-exports.save = connection => { 
-    connection.id = uuid();
-    connection.date = DateTime.now().toLocaleString(DateTime.DATETIME_SHORT);
-    connections.push(connection);
-
-}
-
-exports.updateById = (id, newConnection)=> {
-    let connection = connections.find(connection => connection.id === id);
-    if(connection){
-        connection.topic = newConnection.topic;
-        connection.title = newConnection.title;
-        connection.host = newConnection.host;
-        connection.details = newConnection.details;
-        connection.where = newConnection.where;
-        connection.when = newConnection.when;
-        connection.start = newConnection.start;
-        connection.end = newConnection.end;
-        connection.image_url = newConnection.image_url;
-        return true;
-    }else 
-    return false;
-    
-}
-
-exports.deleteById = id => {
-    let index = connections.findIndex(connection => connection.id === id);
-    if(index !== -1){
-        connections.splice(index, 1);
-        return true;
-    }else {
-    return false;   
-    }
-}
+module.exports = mongoose.model('Connection', connectionSchema);
+   

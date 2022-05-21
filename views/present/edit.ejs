@@ -11,45 +11,45 @@
 <table>
 <tr>
     <td> <label for="topic">Topic:</label></td>
-    <td><input type="text" id="topic" required placeholder="topic" name="topic" size="60" width="20" value="<%=connection.topic%>"></td>
+    <td><input type="text" id="topic" required placeholder="topic" name="topic" size="60" width="20" value="<%=connection.topic%>" required></td>
 </tr>
 
 <tr>
 <td><label for="title">Title:</label></td>
-<td><input type="text" id="title" name="title" required placeholder="title" size="60" value="<%=connection.title%>"></td>
+<td><input type="text" id="title" name="title" required placeholder="title" size="60" value="<%=connection.title%>" required></td>
 </tr>
 <tr>
 <td><label for="host">Host:</label></td>
-<td><input type="text" id="host" name="host" required placeholder="host" size="60" value="<%=connection.host%>"></td>
+<td><input type="text" id="host" name="host" required placeholder="host" size="60" value="<%=connection.host%>" required></td>
 </tr>
 
 <tr>
     <td><label for="details">Details:</label></td>
-    <td><textarea rows="4" cols="60" id="details" name="detials" required placeholder="description" size="60" ><%=connection.details%>"></textarea></td>
+    <td><textarea rows="4" cols="60" id="details" name="details" required placeholder="description" size="60" required minlength="10"><%=connection.details%></textarea></td>
 </tr>
 
 <tr>
     <td><label for="where">Where:</label></td>
-    <td><input type="text" id="where" name="where" required placeholder="where" size="60"value="<%=connection.where%>"></td>
+    <td><input type="text" id="where" name="where" required placeholder="where" size="60"value="<%=connection.where%>" required></td>
 </tr>
 
 <tr>
     <td><label for="when">When:</label></td>
-    <td><input type="date" id="when" name="where"  size="60"value="<%=connection.when%>"></td>
+    <td><input type="date" id="when" name="when"  size="60"value="<%=connection.when%>" required></td>
 </tr>
 <tr>
     <td><label for="start">Start:</label></td>
-    <td><input type="time"  name="time"  value="<%=connection.start%>"></td>
+    <td><input type="time"  name="start"  value="<%=connection.start%>" required></td>
 </tr>
 
 <tr>
     <td><label for="end">End:</label></td>
-    <td><input type="time" id="end" name="end" size="30"value="<%=connection.end%>"></td>
+    <td><input type="time" id="end" name="end" size="30"value="<%=connection.end%>" required></td>
 </tr>
 
 <tr>
     <td><label for="imageURL">image URL:</label></td>
-    <td><input type="text" id="imageURL" name="image_url" required placeholder="imageURL" size="60"value="<%=connection.image_url%>"></td>
+    <td><input type="text" id="imageURL" name="image_url" required placeholder="imageURL" size="60"value="<%=connection.image_url%>" required></td>
 </tr>
 </table>
 <input type="submit" value=" edit link" >
