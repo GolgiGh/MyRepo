@@ -1,3 +1,5 @@
+// Author: Obed Gyawu
+
 const model = require('../models/connection');
 const RSVP = require('../models/rsvp');
 
